@@ -26,7 +26,7 @@ class API_WEATHER{
     })
   }
 
-  fetchTHREEDAYSForecast() {
+  getTHREEDAYSForecast() {
     return axios
     .get(`${API_URL3DAY}?q=${this.city}&units=metric&cnt=3&appid=${API_KEY}`, {
       crossdomain: true

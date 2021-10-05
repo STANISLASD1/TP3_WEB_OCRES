@@ -2,7 +2,7 @@
 function Action()
 {
   start();
-  fetchTHREEDAYForecast(); 
+  getTHREEDAYForecast(); 
 }
 //  Fonction appelée lors du click du bouton
 function start() { 
@@ -36,7 +36,7 @@ function start() {
       console.error(error);
     });
 }
-function fetchTHREEDAYForecast() 
+function getTHREEDAYForecast() 
 {
   //initialisation de city
   city = document.getElementById("city-input").value;
@@ -45,7 +45,7 @@ function fetchTHREEDAYForecast()
   // Appel de la fonction fetchTodayForecast
 
   apiWeatherTHREEDay  
-    .fetchTHREEDAYSForecast()
+    .getTHREEDAYSForecast()
     .then(function(response) {
       // Récupère la donnée d'une API
       const data = response.data;
