@@ -1,10 +1,11 @@
 
-// Fonction appelée lors du click du bouton
-function start() {
+//  Fonction appelée lors du click du bouton
+function start() { 
+  city = document.getElementById("city-input").value;
   // Création de l'objet apiWeather
-  const apiWeather = new API_WEATHER();
+  const apiWeather = new API_WEATHER(city);
   // Appel de la fonction fetchTodayForecast
-
+ 
   apiWeather
     .fetchTodayForecast()
     .then(function(response) {
@@ -24,6 +25,7 @@ function start() {
       document.getElementById('today-forecast-temp').innerHTML = `${temp}°C`;
       
     })
+    
     .catch(function(error) {
       // Affiche une erreur
       console.error(error);
